@@ -42,6 +42,7 @@ To get the most out of the **Plottos Engine**, use the following syntax for your
 * **Asymptote Safety:** The engine is built to detect vertical asymptotes (like in $1/x$ or $\ln(x)$ as $x \to 0$) and will automatically "lift the pen" to prevent visual glitches.
 
 ---
+![Plottos Showcase](assets/showcase.jpg)
 
 ## ⚙️ Installation & Setup
 
