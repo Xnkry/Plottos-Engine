@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Lato:wght@900&display=swap');
+
+body {
+    background-color: #050505;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Button Styling */
+.btn-math {
+    position: relative;
+    padding: 18px 45px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #00ff95;
+    color: #00ff95;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.btn-math:hover {
+    background-color: #00ff95;
+    color: #000;
+    box-shadow: 0 0 30px rgba(0, 255, 149, 0.8);
+    transform: scale(1.05);
+}
+
+/* AI Analysis Panel Styling */
+#aiResponse {
+    line-height: 1.7;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #111 transparent;
+}
+
+#aiResponse::-webkit-scrollbar {
+    width: 4px;
+}
+
+#aiResponse::-webkit-scrollbar-thumb {
+    background: #111;
+    border-radius: 10px;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+    0% { opacity: 0.3; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.3; transform: scale(0.98); }
+}
+
+.ai-thinking {
+    animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    body { overflow-y: auto !important; }
+    #aiResponse { max-height: 500px; }
+}

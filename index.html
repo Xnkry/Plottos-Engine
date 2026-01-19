@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plottos | Math Plotter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#050505] overflow-x-hidden">
+
+    <div id="canvas-container" class="fixed top-0 left-0 w-full h-full -z-10"></div>
+
+    <nav class="relative z-50 p-6 flex justify-between items-center">
+      <a class="flex items-center gap-3" href="#">
+        <img src="math-wiki-svgrepo-com.svg" alt="Logo" class="h-8 w-auto brightness-0 invert">
+        <span class="text-white font-bold text-2xl tracking-tight">Plottos</span>
+      </a>
+    </nav>
+
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-[80vh] text-center px-6">
+        <h1 class="text-4xl md:text-7xl font-black text-white mb-6 leading-tight">
+            Visualize the <span class="text-[#00ff95]">Invisible.</span>
+        </h1>
+        <p class="text-gray-400 text-sm md:text-lg max-w-lg mb-10">
+            Transform complex functions into interactive 2D structures.
+        </p>
+        
+        <a href="plott.html">
+            <button class="btn-math">
+                <span>START PLOTTING</span>
+            </button>
+        </a>
+    </main>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

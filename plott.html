@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plottos | Math Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#050505] text-white overflow-x-hidden lg:overflow-hidden h-screen flex flex-col">
+
+    <header class="z-50 flex flex-col lg:flex-row items-center justify-between p-6 lg:px-10 lg:h-24 gap-4">
+        <div class="flex items-center gap-4 w-full lg:w-64">
+            <div class="p-2 bg-[#00ff95]/10 rounded-lg border border-[#00ff95]/20">
+                <img src="math-wiki-svgrepo-com.svg" alt="Logo" class="h-6 brightness-0 invert">
+            </div>
+            <h1 class="text-lg font-black tracking-widest uppercase">Plottos</h1>
+        </div>
+
+        <div class="flex-grow w-full max-w-xl">
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 md:py-3 rounded-2xl shadow-2xl">
+                <span class="text-[#00ff95] font-mono text-lg font-bold">f(x)=</span>
+                <input type="text" id="funcInput" value="x * x" 
+                       class="bg-transparent border-none outline-none text-base md:text-lg font-mono w-full focus:ring-0 text-white"
+                       placeholder="Enter math...">
+                <button id="plotBtn" class="bg-[#00ff95] text-black font-black px-4 md:px-6 py-2 rounded-xl hover:scale-105 transition-all text-xs md:text-sm">
+                    PLOT
+                </button>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex flex-col w-64 text-right">
+            <span class="text-[10px] text-[#00ff95] font-mono tracking-widest uppercase">System Online</span>
+            <span class="text-[9px] text-gray-600 font-mono tracking-tighter uppercase">v2.0.4 - Stable</span>
+        </div>
+    </header>
+
+    <main class="flex-grow grid grid-cols-12 gap-6 px-6 lg:px-10 pb-10 overflow-y-auto lg:overflow-hidden">
+        
+        <section class="col-span-12 lg:col-span-8 relative bg-[#0a0a0a] rounded-[1.5rem] lg:rounded-[2.5rem] border border-white/5 overflow-hidden min-h-[400px]">
+            <canvas id="plotCanvas" class="w-full h-full"></canvas>
+            <div class="absolute top-4 left-4 lg:top-8 lg:left-8 flex gap-2">
+                <div class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md border border-white/5 text-[9px] font-mono text-gray-400">X: AUTO</div>
+                <div class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md border border-white/5 text-[9px] font-mono text-gray-400">Y: AUTO</div>
+            </div>
+        </section>
+
+        <aside class="col-span-12 lg:col-span-4 flex flex-col bg-white/5 border border-white/10 rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden min-h-[500px] lg:min-h-0">
+            <div class="p-6 lg:p-8 border-b border-white/5">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-[#00ff95] rounded-full"></span>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-300">Analysis Engine</h2>
+                </div>
+            </div>
+            
+            <div id="aiResponse" class="flex-grow p-6 lg:p-8 text-sm text-gray-400 leading-relaxed overflow-y-auto">
+                <p class="italic text-gray-600">Enter a function and click Plot to begin...</p>
+            </div>
+
+            <div class="p-6 lg:p-8 border-t border-white/5">
+                <button id="explainBtn" class="w-full bg-white/5 border border-white/10 py-4 rounded-2xl text-[11px] font-bold uppercase tracking-widest hover:bg-[#00ff95] hover:text-black transition-all">
+                    Generate Analysis
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="config.js"></script>
+    <script type="module" src="plott.js"></script>
+</body>
+</html>
