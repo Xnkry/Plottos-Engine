@@ -9,3 +9,30 @@ Model License:
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
 This work is based on "Relativity of Simultaneity Abstract Art" (https://sketchfab.com/3d-models/relativity-of-simultaneity-abstract-art-3f623cadf1b94c0ba9ea97804f9b6dc0) by daydev (https://sketchfab.com/daydev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+---
+
+### How to apply this to your GitHub Repo:
+
+Since you are in your `plotter` directory in the fish shell, run these commands to update the README:
+
+1.  **Create the Image Folder:**
+    `mkdir -p assets`
+2.  **Move your screenshot:** Move your image into the `assets` folder and name it `showcase.jpg`.
+3.  **Update README:** Open `README.md` in VS Code, paste the content above, and save it.
+4.  **Push to GitHub:**
+    ```bash
+    git add .
+    git commit -m "docs: finalize professional README with user guide and showcase image"
+    git push
+    ```
+
+
+
+[Image of a natural logarithmic function graph]
+
+
+
+[Image of absolute value function graph]
+
+
+**Would you like me to show you how to check your GitHub "About" section to make sure the Live Demo link is clearly visible to visitors?**
